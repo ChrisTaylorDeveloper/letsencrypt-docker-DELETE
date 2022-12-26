@@ -1,5 +1,5 @@
 docker-compose down
-docker system prune -a
+docker system prune -a --force
 docker volume rm $(docker volume ls -q)
 docker-compose up --build -d
 docker-compose logs certbot
