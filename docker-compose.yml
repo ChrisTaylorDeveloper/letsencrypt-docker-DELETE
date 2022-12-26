@@ -25,11 +25,11 @@ volumes:
         driver: local
         driver_opts:
             type: none
-            device: ${VOLUME_WEB_ROOT}
+            device: ./web-root
             o: bind
     dhparam:
         driver: local
         driver_opts:
             type: none
-            device: ${VOLUME_DHPARAM}
+            device: ./dhparam
             o: bind
