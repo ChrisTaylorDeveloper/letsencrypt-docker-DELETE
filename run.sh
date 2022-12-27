@@ -8,7 +8,7 @@ then
     docker volume rm "$(docker volume ls -q)"
 fi
 
-# docker-compose up --build -d
+docker-compose up --build -d nginx
 # echo "certbot logs"
 # docker-compose logs certbot
 # echo "nginx logs"
