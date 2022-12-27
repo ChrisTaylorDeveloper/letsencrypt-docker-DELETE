@@ -10,7 +10,4 @@ fi
 
 docker-compose up --build -d nginx
 
-# echo "certbot logs"
-# docker-compose logs certbot
-# echo "nginx logs"
-# docker-compose logs nginx
+# Pause here until http://worldpeace.cloud response code is 200
