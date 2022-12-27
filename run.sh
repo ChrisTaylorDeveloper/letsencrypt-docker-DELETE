@@ -9,6 +9,7 @@ then
 fi
 
 docker-compose up --build -d nginx
+
 # echo "certbot logs"
 # docker-compose logs certbot
 # echo "nginx logs"
