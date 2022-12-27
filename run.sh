@@ -14,6 +14,3 @@ docker-compose up --build -d nginx
 # docker-compose logs certbot
 # echo "nginx logs"
 # docker-compose logs nginx
-
-docker-compose ps
-docker-compose logs nginx
