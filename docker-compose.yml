@@ -8,10 +8,10 @@ services:
             - dhparam:/etc/ssl/certs
         command: certonly --webroot --webroot-path=/var/www/html --email ${SECURE_DOMAIN_EMAIL} --agree-tos --no-eff-email --force-renewal -d ${SECURE_DOMAIN} ${CERTBOT_STAGING}
     nginx:
-        build:
-            context: .
+        image: nginx:1.23.3
         volumes:
             - web-root:/usr/share/nginx/html
+            - ./nginx.conf:/etc/nginx/nginx.conf:ro
         ports:
             - "80:80"
             - "443:443"
