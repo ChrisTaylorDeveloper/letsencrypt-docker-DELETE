@@ -3,12 +3,10 @@
 docker-compose down
 
 if [[ $RESET_HARD == "1" ]]
-    then echo "True"
-    else echo "False"
+    docker system prune -a --force
+    docker volume rm $(docker volume ls -q)
 fi
 
-# docker system prune -a --force
-# docker volume rm $(docker volume ls -q)
 # docker-compose up --build -d
 # echo "certbot logs"
 # docker-compose logs certbot
